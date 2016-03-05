@@ -1,75 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
+
 <head>
     <meta charset="UTF-8">
     <title>Contact</title>
     <link type="text/css" rel="stylesheet"
           href="style.css"/>
-</head>
-<body>
-<div class="wrapper">
-<ul id="top-menu-bar">
-    <li><a href="./index.html">HOME</a></li>
-    <li><a href="#">Projects</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="./contact.html">Contact</a></li>
-</ul>
 
-<div class="row">
-    <div class="col-lg-8 col-md-offset-2">
-        <div class="boxed-grey">
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'> </script>
+
+    <script type='text/javascript'>
+    function init_map()
+    {
+    var myOptions = {zoom:17,
+    center:new google.maps.LatLng(46.75441667625981,23.584726199197362),
+    mapTypeId: google.maps.MapTypeId.ROADMAP};
+    map = new google.maps.Map(document.getElementById('googleMap'), myOptions);
+    marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(46.75441667625981,23.584726199197362)});
+    infowindow = new google.maps.InfoWindow({content:'<strong>Street</strong><br>Observatorului nr 90,Cluj-Napoca<br>'});
+    google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});
+    infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+    </script>
+  </head>
+<body>
+
+<div class="wrapper">
+    <h1>Automation Testing Demo Site</h1></br>
+
+    <div id="nav">
+        <ul id="top-menu-bar">
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <div class="content">
+        <div class="form-contact">
             <form id="contact-form">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <div class="input-group">
-                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
-                                </span>
-                                <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <select id="subject" name="subject" class="form-control" required="required">
-                                <option value="na" selected="">Choose One:</option>
-                                <option value="service">General Customer Service</option>
-                                <option value="suggestions">Suggestions</option>
-                                <option value="product">Product Support</option>
-                            </select>
-                        </div>
+                <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter name"
+                               required="required"/>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="name"> Message</label>
-                            <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
-                                      placeholder="Message">
-							</textarea>
-                        </div>
+                <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email"
+                                   required="required"/>
                     </div>
-                    <div class="col-md-12">
-                        <button type="submit" class="btn btn-skin pull-right" id="btnContactUs">Send Message</button>
+                <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" class="form-control" required="required">
+                            <option value="na" selected="">Choose One:</option>
+                            <option value="service">General Customer Service</option>
+                            <option value="suggestions">Suggestions</option>
+                            <option value="product">Product Support</option>
+                        </select>
                     </div>
+                <div class="form-group">
+                    <label for="name"> Message</label></br>
+                    <textarea name="message" id="message" class="form-control" rows="9" cols="25"
+                                      required="required">
+					</textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-skin" id="btnContactUs">Send Message
+                    </button>
                 </div>
             </form>
         </div>
 
-        <div class="widget-contact row">
-            <div class="col-lg-6">
-                <address>
-                    <strong>Address</strong><br>
-                    Str.Observatorului nr.90 , et. 2, ap.16 </br>
-                    Cluj-Napoca,Cluj<br>
-                    <abbr title="Phone">P:</abbr> (123) 456-7890
-                </address>
-            </div>
+        <div id="googleMap">
         </div>
+
+        <div class="address">
+            <address>
+                <p><b>Address:</b>
+                    Strada Observatorului,
+                    nr. 90, apt 16-17, Cluj-Napoca, Cluj, Romania</p>
+                <p><b>Cod Postal:</b>400500</p>
+                <p><b>Phone:</b> 0757-223-211 </p>
+                <p><b>Email: </b><a href='mailto:contact@fasttrackit.org'>contact@fasttrackit.org</a></p>
+            </address>
+        </div>
+
     </div>
 
 </div>
-</div>
+
 </body>
+
+<footer>
+   Curs QA Automation @22.02.2016
+</footer>
 </html>
