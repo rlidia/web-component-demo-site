@@ -1,76 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Curs nr.1</title>
-<link type="text/css" rel="stylesheet"
-    href="style.css"/>
+    <title> Curs nr.1</title>
+    <link type="text/css" rel="stylesheet"
+          href="style.css"/>
 </head>
 <body>
+
 <div class="wrapper">
-<h1>Automation Testing Demo Site</h1></br>
+    <h1>Automation Testing Demo Site</h1></br>
 
-<ul id="top-menu-bar">
-    <li><a href="./index.html">HOME</a></li>
-    <li><a href="#">Projects</a></li>
-    <li><a href="#./about.html">About</a></li>
-    <li><a href="./contact.html">Contact</a></li>
-</ul>
+    <div id="nav">
+        <ul id="top-menu-bar">
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div>
+        <img id="banner" src="banner.jpg" alt="Mountain View">
+    </div>
+    <div id="subscribe-form">
+        <img src="http://www.fasttrackit.org/wp-content/uploads/2015/11/Fastrackit-1.png" width="200">
+        <p>Subscribe to <a href="http://fasttrackit.org">Fasttrackit</a> news</p>
 
-<div>
-	Nume:<label id="labelLR"> Lidia Ratiu</label></br>
-	Firma:Artsoft-Consult</br>
-</div>
-<p>
-	-primul curs de automation <a href="http://fasttrackit.org">link curs</a>
-</p>
-
-<ul class="lista_elem">Curpins: 
-	<li> html</li>
-	<li>css</li>
-	<li>js </li>
-</ul> 
-
-<table border="1">
-	<thead>
-		<td>Col1</td>
-		<td>Col2</td>
-	</thead>
-    <tr>
-        <td>row11</td>
-		<td>row12</td>
-    </tr>
-	<tr>
-        <td>row21</td>
-		<td>row22</td>
-    </tr>
-    <td> enter tag name + TAB introduce tagurile cu semne </td>
-</table>
-<div>
-
-<img src="http://www.fasttrackit.org/wp-content/uploads/2015/11/Fastrackit-1.png" width="200">
-<form action="http://fasttrackit.org"
-    method="post">
-    <label id ="labelLR" for="user-email">Email</label>
-    <input type="email" required
-        id="user-email" name="email"/>
-    <button type="submit" name="submit">
-        Subscribe
-    </button>
-</form>
-</div>
-
-<p
-    id="unique-id"
-    class="css-class"
-    title="info on mouse over"
->
-    paragraph with attributes
-</p>
+        <form action="http://fasttrackit.org" method="post">
+            <label for="user-email">Email</label>
+            <input type="email" required
+                   id="user-email" name="email"/>
+            <button type="submit" name="submit">
+                Subscribe
+            </button>
+        </form>
+    </div>
 
 </div>
+
 </body>
+
 <footer>
     Curs QA Automation @22.02.2016
 </footer>
-
 </html>
