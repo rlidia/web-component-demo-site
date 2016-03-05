@@ -7,7 +7,13 @@ p              { color: red; }
 	}  
 .lista_elem  li{ color: green; } /* element-class*/
 
-
+.wrapper {
+    width: 960px;
+    background: url(../images/vertical-bars-background.png) no-repeat;
+    background-position: left top;
+    margin: 0 auto;
+    text-align: left;
+}
 
 #labelLR{
 font-family: "Georgia", Times, serif;
